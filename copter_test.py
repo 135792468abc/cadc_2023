@@ -15,10 +15,10 @@ print(" Mode: %s" % functhion.vehicle.mode.name)
 print(" DURATION: %s" % DURATION)
 #起飞
 print("播报完成,%s秒后飞行器自动起飞,目标高度：%s" % (DURATION,HEIGHT))
-for i in range(DURATION,0,-1):
+for i in range(DURATION+1,0,-1):
     time.sleep(1)
     print("倒计时：%s" % i)
-    if i==0:
+    if i==1:
         print("起飞！")
 functhion.arm_and_takeoff(HEIGHT)
 
